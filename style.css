@@ -4,4 +4,9 @@
     align-items: center;
 }
 
+.display{
+    border: black solid;
+    height: 30px;
+}
+
 
