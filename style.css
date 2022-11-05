@@ -6,16 +6,21 @@
 
 .calculator{
     border: black solid;
+    height: 300px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
 }
 
 .display{
     border: black solid;
-    height: 30px;
+    flex: 0.5;
 }
 
 .all-buttons{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    flex: 1;
 }
 
 
