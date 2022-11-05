@@ -23,4 +23,7 @@
     flex: 1;
 }
 
+#equal{
+    grid-column: 3/5;
+}
 
