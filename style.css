@@ -8,6 +8,8 @@
     border: black solid;
     height: 300px;
     width: 250px;
+    padding: 5px;
+    gap: 10px;
     display: flex;
     flex-direction: column;
 }
