@@ -6,8 +6,8 @@
 
 .calculator{
     border: black solid;
-    height: 300px;
-    width: 250px;
+    height: 400px;
+    width: 350px;
     padding: 5px;
     gap: 10px;
     display: flex;
@@ -16,7 +16,7 @@
 
 .display{
     border: black solid;
-    flex: 0.5;
+    flex: 0.35;
 }
 
 .all-buttons{
