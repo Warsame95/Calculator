@@ -4,6 +4,10 @@
     align-items: center;
 }
 
+.calculator{
+    border: black solid;
+}
+
 .display{
     border: black solid;
     height: 30px;
