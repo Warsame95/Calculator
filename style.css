@@ -14,7 +14,7 @@
     flex-direction: column;
 }
 
-.display{
+#display{
     border: black solid;
     flex: 0.35;
     padding-right: 8px;
