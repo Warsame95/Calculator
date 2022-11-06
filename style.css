@@ -17,6 +17,12 @@
 .display{
     border: black solid;
     flex: 0.35;
+    padding-right: 8px;
+    display: flex;
+    font-size: 5em;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .all-buttons{
