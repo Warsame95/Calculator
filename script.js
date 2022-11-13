@@ -2,7 +2,16 @@
 const digits = document.getElementsByClassName("digits");
 Array.from(digits).forEach((digit) => {digit.addEventListener('click',display)});
 
+// Add setOperator function to all operator buttons
+const OPERATORS = document.querySelectorAll(".operators");
+OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
+
 let displayArea = document.getElementById('display');
+
+let operand1;
+let operand2;
+let currentOperator;
+let result;
 
 function add(op1,op2){
     return op1 + op2;
@@ -41,4 +50,9 @@ function display(e){
     if(displayArea.innerText.length <= 7){
         displayArea.innerText+=num;
     }
+}
+
+function setOperator(e){
+    currentOperator = e.target.innerText;
+    console.log(currentOperator);
 }
