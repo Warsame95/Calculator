@@ -12,6 +12,7 @@ let operand1;
 let operand2;
 let currentOperator;
 let result;
+let isOperatorSelected = false;
 
 function add(op1,op2){
     return op1 + op2;
@@ -53,6 +54,14 @@ function display(e){
 }
 
 function setOperator(e){
-    currentOperator = e.target.innerText;
+
+    if (displayArea!=null){
+        if (!isOperatorSelected){ 
+            currentOperator = e.target.innerText;
+            isOperatorSelected = true;
+            operand1 = displayArea;
+        }
+    }
+
     console.log(currentOperator);
 }
