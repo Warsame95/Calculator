@@ -59,9 +59,9 @@ function setOperator(e){
         if (!isOperatorSelected){ 
             currentOperator = e.target.innerText;
             isOperatorSelected = true;
-            operand1 = displayArea;
+            operand1 = displayArea.textContent;
         }
     }
 
-    console.log(currentOperator);
+    console.log(operand1);
 }
