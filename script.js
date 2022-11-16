@@ -6,6 +6,9 @@ Array.from(digits).forEach((digit) => {digit.addEventListener('click',display)})
 const OPERATORS = document.querySelectorAll(".operators");
 OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
 
+const EQUAL = document.querySelector("#equal");
+EQUAL.addEventListener('click',equals);
+
 let displayArea = document.getElementById('display');
 
 let operand1="";
@@ -50,7 +53,7 @@ function display(e){
     
     //condition to prevent number overflowing
     if(displayArea.innerText.length <= 7){
-        
+
         if(isOperatorSelected == false){
             operand1+=num;
         }
@@ -77,4 +80,8 @@ function setOperator(e){
     }
 
     console.log(operand1);
+}
+
+function equals(e){
+    displayArea.innerText = operate(currentOperator,operand1,operand2);
 }
