@@ -8,11 +8,12 @@ OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
 
 let displayArea = document.getElementById('display');
 
-let operand1;
-let operand2;
+let operand1="";
+let operand2="";
 let currentOperator;
 let result;
 let isOperatorSelected = false;
+let displayCleared = false;
 
 function add(op1,op2){
     return op1 + op2;
@@ -49,8 +50,21 @@ function display(e){
     
     //condition to prevent number overflowing
     if(displayArea.innerText.length <= 7){
+        
+        if(isOperatorSelected == false){
+            operand1+=num;
+        }
+        else{
+            if(displayCleared == false){
+                displayArea.innerText = "";
+                displayCleared = true;
+            }
+            operand2+=num;
+        }
         displayArea.innerText+=num;
     }
+    console.log(operand1);
+    console.log(operand2);
 }
 
 function setOperator(e){
@@ -59,7 +73,6 @@ function setOperator(e){
         if (!isOperatorSelected){ 
             currentOperator = e.target.innerText;
             isOperatorSelected = true;
-            operand1 = displayArea.textContent;
         }
     }
 
