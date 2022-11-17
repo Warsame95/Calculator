@@ -9,6 +9,9 @@ OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
 const EQUAL = document.querySelector("#equal");
 EQUAL.addEventListener('click',equals);
 
+const AC = document.querySelector("#ac");
+AC.addEventListener('click',clear);
+
 let displayArea = document.getElementById('display');
 
 let operand1="";
@@ -84,4 +87,14 @@ function setOperator(e){
 
 function equals(e){
     displayArea.innerText = operate(currentOperator,operand1,operand2);
+}
+
+function clear(e){
+    displayArea.innerText = "";
+    operand1 = "";
+    operand2 = "";
+    isOperatorSelected = false;
+    displayCleared = false;
+
+
 }
