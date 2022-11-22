@@ -69,20 +69,29 @@ function display(e){
         }
         displayArea.innerText+=num;
     }
-    console.log(operand1);
-    console.log(operand2);
+    //console.log(operand1);
+    //console.log(operand2);
 }
 
 function setOperator(e){
 
     if (displayArea!=null){
         if (!isOperatorSelected){ 
-            currentOperator = e.target.innerText;
             isOperatorSelected = true;
+            //console.log("still here");
         }
+        else{
+            equals(e);
+            operand1 = operate(currentOperator,operand1,operand2);
+            operand2 = "";
+            displayCleared = false;
+            console.log("in else");
+            console.log(operand1);
+            console.log(operand2);
+        }
+        currentOperator = e.target.innerText;
     }
 
-    console.log(operand1);
 }
 
 function equals(e){
