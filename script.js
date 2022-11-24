@@ -113,10 +113,9 @@ function clear(e){
 }
 
 function addDecimal(e){
-    /* if (displayArea.innerText != "" || displayArea.innerText != "0"){
-
-    } */
-    display(e);
+    if (!displayArea.innerText.includes(".")){
+        display(e);
+    }
     
 }
 
