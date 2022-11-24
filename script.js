@@ -6,6 +6,9 @@ Array.from(digits).forEach((digit) => {digit.addEventListener('click',display)})
 const OPERATORS = document.querySelectorAll(".operators");
 OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
 
+const decimal = document.querySelector("#decimal");
+decimal.addEventListener('click',addDecimal);
+
 const EQUAL = document.querySelector("#equal");
 EQUAL.addEventListener('click',equals);
 
@@ -26,7 +29,7 @@ function add(op1,op2){
 }
 
 function subtract(op1,op2){
-    return op1 - op2;
+    return +op1 - +op2;
 }
 
 function multiply(op1,op2){
@@ -95,7 +98,8 @@ function setOperator(e){
 }
 
 function equals(e){
-    displayArea.innerText = operate(currentOperator,operand1,operand2);
+    displayArea.innerText = roundAnswer(operate(currentOperator,operand1,operand2));
+    
 }
 
 function clear(e){
@@ -106,4 +110,16 @@ function clear(e){
     displayCleared = false;
 
 
+}
+
+function addDecimal(e){
+    /* if (displayArea.innerText != "" || displayArea.innerText != "0"){
+
+    } */
+    display(e);
+    
+}
+
+function roundAnswer(number){
+    return Math.round(number * 1000) / 1000;
 }
