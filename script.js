@@ -15,6 +15,9 @@ EQUAL.addEventListener('click',equals);
 const AC = document.querySelector("#ac");
 AC.addEventListener('click',clear);
 
+const DEL = document.querySelector("#delete");
+DEL.addEventListener('click',deleteNum);
+
 let displayArea = document.getElementById('display');
 
 let operand1="";
@@ -121,4 +124,14 @@ function addDecimal(e){
 
 function roundAnswer(number){
     return Math.round(number * 1000) / 1000;
+}
+
+function deleteNum(e){
+    if (!isOperatorSelected){
+        operand1 = operand1.slice(0,-1);
+    }
+    else{
+        operand2 = operand.slice(0,-1);
+    }
+    displayArea.innerText = displayArea.innerText.slice(0,-1);
 }
