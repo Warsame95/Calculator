@@ -131,7 +131,17 @@ function deleteNum(e){
         operand1 = operand1.slice(0,-1);
     }
     else{
-        operand2 = operand.slice(0,-1);
+        operand2 = operand2.slice(0,-1);
+    }
+    displayArea.innerText = displayArea.innerText.slice(0,-1);
+}
+
+function percent(e){
+    if (!isOperatorSelected){
+        operand1 = operand1/100;
+    }
+    else{
+        operand2 = operand.s
     }
     displayArea.innerText = displayArea.innerText.slice(0,-1);
 }
