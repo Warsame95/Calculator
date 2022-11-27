@@ -6,6 +6,9 @@ Array.from(digits).forEach((digit) => {digit.addEventListener('click',display)})
 const OPERATORS = document.querySelectorAll(".operators");
 OPERATORS.forEach((operator) => operator.addEventListener('click',setOperator));
 
+const percent = document.querySelector("#percent");
+percent.addEventListener('click',setPercentage);
+
 const decimal = document.querySelector("#decimal");
 decimal.addEventListener('click',addDecimal);
 
@@ -136,12 +139,12 @@ function deleteNum(e){
     displayArea.innerText = displayArea.innerText.slice(0,-1);
 }
 
-function percent(e){
+function setPercentage(e){
     if (!isOperatorSelected){
         operand1 = operand1/100;
     }
     else{
-        operand2 = operand.s
+        operand2 = operand2/100;
     }
-    displayArea.innerText = displayArea.innerText.slice(0,-1);
+    displayArea.innerText = displayArea.innerText/100;
 }
