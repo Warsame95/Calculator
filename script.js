@@ -98,14 +98,16 @@ function setOperator(e){
             console.log(operand1);
             console.log(operand2);
         }
-        currentOperator = e.target.innerText;
+        currentOperator = e.target.value;
+        //console.log(e.target.value);
     }
 
 }
 
 function equals(e){
-    displayArea.innerText = roundAnswer(operate(currentOperator,operand1,operand2));
-    
+    displayArea.innerText = operate(currentOperator,operand1,operand2);
+    //displayArea.innerText = roundAnswer(operate(currentOperator,operand1,operand2));
+    //console.log(roundAnswer(operate(currentOperator,operand1,operand2)));
 }
 
 function clear(e){
