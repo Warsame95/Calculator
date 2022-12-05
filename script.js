@@ -98,8 +98,8 @@ function setOperator(e){
             console.log(operand1);
             console.log(operand2);
         }
-        currentOperator = e.target.value;
-        //console.log(e.target.value);
+        currentOperator = e.target.innerText;
+        //console.log(e.target.innerText);
     }
 
 }
