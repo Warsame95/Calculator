@@ -43,7 +43,7 @@ button{
     border: none;
     font-size: large;
     font-weight: bold;
-    background-color: white;  
+    background: #ececec;  
 }
 
 button:hover{
