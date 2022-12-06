@@ -105,9 +105,17 @@ function setOperator(e){
 }
 
 function equals(e){
-    displayArea.innerText = operate(currentOperator,operand1,operand2);
-    //displayArea.innerText = roundAnswer(operate(currentOperator,operand1,operand2));
-    //console.log(roundAnswer(operate(currentOperator,operand1,operand2)));
+    let ans = operate(currentOperator,operand1,operand2);
+    console.log(ans.toString().length);
+    if(ans.toString().length >= 7){
+        displayArea.innerText = ans.toFixed(7);
+    }
+    else{
+        displayArea.innerText = roundAnswer(ans);
+    }
+
+    //displayArea.innerText = operate(currentOperator,operand1,operand2);
+    //console.log(operate(currentOperator,operand1,operand2));
 }
 
 function clear(e){
