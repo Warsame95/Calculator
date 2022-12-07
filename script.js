@@ -162,7 +162,7 @@ function setPercentage(e){
 }
 
 function keyPress(e){
-    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
-    console.log(e.keyCode);
+    const key = document.querySelector(`button[data-key='${e.code}']`);
+    //console.log(e.key + " " + e.keyCode + " " + e.code);
     key.click();
 }
