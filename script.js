@@ -21,6 +21,8 @@ AC.addEventListener('click',clear);
 const DEL = document.querySelector("#delete");
 DEL.addEventListener('click',deleteNum);
 
+window.addEventListener("keydown",keyPress, false);
+
 let displayArea = document.getElementById('display');
 
 let operand1="";
@@ -157,4 +159,10 @@ function setPercentage(e){
         operand2 = operand2/100;
     }
     displayArea.innerText = displayArea.innerText/100;
+}
+
+function keyPress(e){
+    const key = document.querySelector(`button[data-key='${e.keyCode}']`);
+    console.log(e.keyCode);
+    key.click();
 }
